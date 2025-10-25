@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Check-In</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Library Check-In</h1>
+        <p class="subtitle">Track your library presence</p>
+
+        <div id="setupView">
+            <input 
+                type="text" 
+                id="userCode" 
+                placeholder="Enter your unique code (e.g., JOHN123)"
+                maxlength="20"
+            >
+            <button onclick="saveUserCode()">Save Code</button>
+        </div>
+
+        <div id="mainView" class="hidden">
+            <div class="user-info">
+                Logged in as: <span class="user-code" id="displayCode"></span>
+            </div>
+
+            <div class="status-card">
+                <div class="status-label">Current Status</div>
+                <div class="status-value" id="statusText">Checking...</div>
+            </div>
+
+            <button id="toggleButton" onclick="toggleStatus()">
+                Loading...
+            </button>
+
+            <div id="message" class="message hidden"></div>
+        </div>
+
+        <div class="people-section">
+            <h2>Currently in Library</h2>
+            <div id="peopleTable">
+                <div class="loading">Loading...</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
