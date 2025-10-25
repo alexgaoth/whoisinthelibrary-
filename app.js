@@ -70,10 +70,12 @@ function updateUI() {
         statusText.textContent = 'In Library';
         statusText.classList.remove('out');
         toggleButton.textContent = 'Check Out';
+        toggleButton.classList.add('checkout');
     } else {
         statusText.textContent = 'Not in Library';
         statusText.classList.add('out');
         toggleButton.textContent = 'Check In';
+        toggleButton.classList.remove('checkout');
     }
 }
 
