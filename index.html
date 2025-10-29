@@ -27,6 +27,11 @@
                 Logged in as: <span class="user-code" id="displayCode"></span>
             </div>
 
+            <div class="stats-card" id="userStats">
+                <div class="stat-label">Your Total Time</div>
+                <div class="stat-value">0h 0m</div>
+            </div>
+
             <div class="location-toggle-section">
                 <label class="toggle-container">
                     <input type="checkbox" id="autoCheckToggle" onchange="toggleAutoCheck()">
@@ -50,6 +55,14 @@
         <div class="people-section">
             <h2>Currently in Library</h2>
             <div id="peopleTable">
+                <div class="loading">Loading...</div>
+            </div>
+        </div>
+
+        <div class="leaderboard-section">
+            <h2>Leaderboard</h2>
+            <p class="section-subtitle">Top library grinders</p>
+            <div id="leaderboardTable">
                 <div class="loading">Loading...</div>
             </div>
         </div>

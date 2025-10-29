@@ -27,7 +27,7 @@ h1 {
 h2 {
     font-size: 24px;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     color: #000000;
 }
 
@@ -37,16 +37,44 @@ h2 {
     margin-bottom: 32px;
 }
 
+.section-subtitle {
+    color: #666666;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
 .user-info {
     color: #666666;
     font-size: 14px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
 .user-code {
     color: #000000;
     font-weight: 600;
+}
+
+.stats-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    text-align: center;
+    color: white;
+}
+
+.stat-label {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.stat-value {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 .location-toggle-section {
@@ -180,6 +208,7 @@ button:active {
 button:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+    background: #9ca3af !important;
 }
 
 #toggleButton.checkout {
@@ -262,6 +291,104 @@ button:disabled {
 .duration {
     color: #666666;
     font-size: 14px;
+}
+
+.leaderboard-section {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid #dddddd;
+}
+
+.leaderboard-table {
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.leaderboard-header {
+    display: grid;
+    grid-template-columns: 80px 1fr 120px;
+    padding: 16px 20px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #dddddd;
+    font-weight: 600;
+    font-size: 14px;
+    color: #666666;
+}
+
+.leaderboard-row {
+    display: grid;
+    grid-template-columns: 80px 1fr 120px;
+    padding: 16px 20px;
+    border-bottom: 1px solid #eeeeee;
+    transition: all 0.2s;
+    align-items: center;
+}
+
+.leaderboard-row:last-child {
+    border-bottom: none;
+}
+
+.leaderboard-row:hover {
+    background: #fafafa;
+}
+
+.leaderboard-row.current-user {
+    background: #f0fdf4;
+    border-left: 4px solid #22c55e;
+}
+
+.leaderboard-row.current-user:hover {
+    background: #dcfce7;
+}
+
+.rank {
+    font-weight: 700;
+    font-size: 18px;
+    color: #666666;
+}
+
+.leaderboard-row.rank-1 {
+    background: #fffbeb;
+}
+
+.leaderboard-row.rank-1 .rank {
+    font-size: 24px;
+}
+
+.leaderboard-row.rank-2 {
+    background: #f5f5f5;
+}
+
+.leaderboard-row.rank-2 .rank {
+    font-size: 22px;
+}
+
+.leaderboard-row.rank-3 {
+    background: #fef2f2;
+}
+
+.leaderboard-row.rank-3 .rank {
+    font-size: 20px;
+}
+
+.leaderboard-row.rank-1.current-user,
+.leaderboard-row.rank-2.current-user,
+.leaderboard-row.rank-3.current-user {
+    background: linear-gradient(90deg, #fffbeb 0%, #f0fdf4 100%);
+}
+
+.leaderboard-user {
+    font-weight: 500;
+    color: #000000;
+}
+
+.time {
+    color: #666666;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: right;
 }
 
 .loading {
