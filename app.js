@@ -6,8 +6,8 @@ let autoCheckEnabled = false;
 
 // Define your library coordinates (CHANGE THESE!)
 const LIBRARY_LOCATION = {
-    latitude: 32.8801,  
-    longitude: -117.2340, 
+    latitude: 32.880908,  
+    longitude: -117.237081, 
     radius: 50 
 };
 
