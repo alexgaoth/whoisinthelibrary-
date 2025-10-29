@@ -37,6 +37,79 @@ h2 {
     margin-bottom: 32px;
 }
 
+.user-info {
+    color: #666666;
+    font-size: 14px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.user-code {
+    color: #000000;
+    font-weight: 600;
+}
+
+.location-toggle-section {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 24px;
+}
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.toggle-container input[type="checkbox"] {
+    width: 44px;
+    height: 24px;
+    margin: 0;
+    margin-right: 12px;
+    cursor: pointer;
+    appearance: none;
+    background: #d1d5db;
+    border-radius: 12px;
+    position: relative;
+    transition: background 0.2s;
+}
+
+.toggle-container input[type="checkbox"]:checked {
+    background: #22c55e;
+}
+
+.toggle-container input[type="checkbox"]::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.2s;
+}
+
+.toggle-container input[type="checkbox"]:checked::before {
+    transform: translateX(20px);
+}
+
+.toggle-label {
+    font-size: 15px;
+    color: #374151;
+    font-weight: 500;
+}
+
+.location-status {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #6b7280;
+    min-height: 18px;
+}
+
 .status-card {
     background: #f5f5f5;
     border: 1px solid #dddddd;
@@ -62,7 +135,7 @@ h2 {
     color: #999999;
 }
 
-input {
+input[type="text"] {
     width: 100%;
     padding: 12px 16px;
     background: #ffffff;
@@ -74,12 +147,12 @@ input {
     transition: border-color 0.2s;
 }
 
-input:focus {
+input[type="text"]:focus {
     outline: none;
     border-color: #000000;
 }
 
-input::placeholder {
+input[type="text"]::placeholder {
     color: #999999;
 }
 
@@ -109,7 +182,6 @@ button:disabled {
     cursor: not-allowed;
 }
 
-/* Red button when checking out */
 #toggleButton.checkout {
     background: #ef4444;
 }
@@ -140,18 +212,6 @@ button:disabled {
 
 .hidden {
     display: none;
-}
-
-.user-info {
-    color: #666666;
-    font-size: 14px;
-    margin-bottom: 24px;
-    text-align: center;
-}
-
-.user-code {
-    color: #000000;
-    font-weight: 600;
 }
 
 .people-section {

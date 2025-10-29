@@ -27,6 +27,14 @@
                 Logged in as: <span class="user-code" id="displayCode"></span>
             </div>
 
+            <div class="location-toggle-section">
+                <label class="toggle-container">
+                    <input type="checkbox" id="autoCheckToggle" onchange="toggleAutoCheck()">
+                    <span class="toggle-label">Auto check-in/out based on location</span>
+                </label>
+                <div class="location-status" id="locationStatus"></div>
+            </div>
+
             <div class="status-card">
                 <div class="status-label">Current Status</div>
                 <div class="status-value" id="statusText">Checking...</div>
